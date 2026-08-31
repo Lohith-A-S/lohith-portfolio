@@ -27,6 +27,7 @@ const tools=[
  ['Splunk','splunk'],['ServiceNow','snow'],['Jira','jira'],['SharePoint','share'],['Confluence','conf']
 ]
 
+// Add future credentials here: place the badge in /public/certifications and add one object with its badge path.
 const certifications=[
  {id:'dp203',code:'DP-203',title:'Azure Data Engineer Associate',issuer:'Microsoft',type:'CERTIFICATION',family:'DATA ENGINEERING',accent:'cyan',badge:'/certifications/microsoft-certified-associate-badge.svg',summary:'Data engineering credential focused on designing and implementing data solutions across Azure.',topics:['Azure data services','Data integration','Data transformation','Data pipelines']},
  {id:'az900',code:'AZ-900',title:'Azure Fundamentals',issuer:'Microsoft',type:'CERTIFICATION',family:'CLOUD FUNDAMENTALS',accent:'blue',badge:'/certifications/microsoft-certified-fundamentals-badge.svg',summary:'Foundational Azure credential covering cloud concepts, core Azure services, security, governance and pricing.',topics:['Cloud concepts','Azure architecture','Security & governance','Azure services']},
@@ -114,7 +115,7 @@ function App(){
        {certifications.filter(c=>certFilter==='ALL'||(certFilter==='MICROSOFT'&&c.issuer==='Microsoft')||(certFilter==='GOOGLE CLOUD'&&c.issuer==='Google Cloud')).map(c=>
         <button type="button" key={c.id} className={`cert-card ${c.accent} ${selectedCert.id===c.id?'selected':''}`} onClick={()=>setSelectedCert(c)}>
          <div className="cert-card-top"><span>{c.code}</span><BadgeCheck size={16}/></div>
-         <div className="cert-mark"><Award size={25}/></div>
+         <div className="cert-mark"><img src={c.badge} alt={`${c.title} badge`} /></div>
          <span className="cert-family">{c.family}</span>
          <h3>{c.title}</h3>
          <p>{c.issuer}</p>
@@ -123,8 +124,9 @@ function App(){
        )}
       </div>
       <div className={`cert-detail ${selectedCert.accent}`}>
-       <div className="cert-detail-top"><span className="detail-label">SELECTED CREDENTIAL</span><span className="detail-status"><BadgeCheck size={13}/> CREDENTIAL</span></div>
-       <div className="cert-emblem"><Award size={31}/></div>
+       <div className="cert-detail-top"><span className="detail-label">SELECTED CREDENTIAL</span><span className="detail-status"><BadgeCheck size={13}/> {selectedCert.type}</span></div>
+       <div className="cert-emblem"><img src={selectedCert.badge} alt={`${selectedCert.title} badge`} /></div>
+       <div className="cert-type">{selectedCert.type}</div>
        <span className="cert-family">{selectedCert.family}</span>
        <h3>{selectedCert.code}</h3>
        <h4>{selectedCert.title}</h4>

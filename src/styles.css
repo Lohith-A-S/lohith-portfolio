@@ -117,7 +117,7 @@ footer b{letter-spacing:.01em}.footer-dot{color:var(--cyan)}
 .cert-card.selected{border-color:rgba(137,101,255,.72);background:linear-gradient(145deg,rgba(70,53,145,.18),#07101a);box-shadow:0 0 24px rgba(100,76,220,.09)}
 .cert-card-top{display:flex;justify-content:space-between;align-items:center;color:#6f7e91;font:7px "DM Mono",monospace}
 .cert-card-top svg{color:#6d75a8}
-.cert-mark{width:39px;height:39px;border-radius:9px;display:grid;place-items:center;margin:15px 0 11px;background:rgba(255,255,255,.035);border:1px solid var(--line);color:#9b87ff}
+.cert-mark{width:64px;height:64px;border-radius:10px;display:grid;place-items:center;margin:13px 0 11px;background:rgba(255,255,255,.035);border:1px solid var(--line);overflow:hidden}.cert-mark img{width:58px;height:58px;object-fit:contain;display:block}
 .cert-card.cyan .cert-mark{color:var(--cyan);background:rgba(39,216,255,.06)}
 .cert-card.mint .cert-mark{color:var(--mint);background:rgba(23,228,189,.06)}
 .cert-card.orange .cert-mark{color:var(--orange);background:rgba(255,150,95,.06)}
@@ -132,7 +132,7 @@ footer b{letter-spacing:.01em}.footer-dot{color:var(--cyan)}
 .cert-detail-top{display:flex;justify-content:space-between;align-items:center}
 .detail-label{font:7px "DM Mono",monospace;color:#677589;letter-spacing:.1em}
 .detail-status{display:flex;align-items:center;gap:4px;font:6px "DM Mono",monospace;color:#8e7cff;border:1px solid rgba(137,101,255,.2);padding:4px 6px;border-radius:4px}
-.cert-emblem{width:50px;height:50px;display:grid;place-items:center;margin:22px 0 14px;border-radius:12px;border:1px solid rgba(137,101,255,.3);background:rgba(137,101,255,.09);color:#b29eff}
+.cert-emblem{width:92px;height:92px;display:grid;place-items:center;margin:20px 0 8px;border-radius:14px;border:1px solid rgba(137,101,255,.3);background:rgba(255,255,255,.03);overflow:hidden}.cert-emblem img{width:86px;height:86px;object-fit:contain;display:block}.cert-type{font:6px "DM Mono",monospace;color:#9b87ff;letter-spacing:.1em;margin-bottom:4px}
 .cert-detail.cyan .cert-emblem{color:var(--cyan);border-color:rgba(39,216,255,.25);background:rgba(39,216,255,.06)}
 .cert-detail.mint .cert-emblem{color:var(--mint);border-color:rgba(23,228,189,.25);background:rgba(23,228,189,.06)}
 .cert-detail.orange .cert-emblem{color:var(--orange);border-color:rgba(255,150,95,.25);background:rgba(255,150,95,.06)}

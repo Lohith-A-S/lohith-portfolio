@@ -7,6 +7,7 @@ import {
   Gauge, GitBranch, Layers3, Link2, Network, Play, Search, Server,
   Settings, ShieldCheck, Sparkles, Target, Users, Workflow, Zap
 } from 'lucide-react'
+import {Analytics} from '@vercel/analytics/react'
 import './styles.css'
 
 const linkedin='https://www.linkedin.com/in/lohith-a-s/'
@@ -243,6 +244,7 @@ function App(){
   <footer><b>LOHITH A S</b><span>BI · Analytics · Data</span><span>© 2026 Lohith A S. All rights reserved.</span><span>Designed & Built with <strong>♥</strong> and lots of coffee ☕</span></footer>
 
   {videoOpen&&<div className="modal" onClick={()=>setVideoOpen(false)}><div className="modal-video" onClick={e=>e.stopPropagation()}><button onClick={()=>setVideoOpen(false)}>×</button><video src="/media/Reporting_Dashboard.mp4" controls autoPlay playsInline/></div></div>}
+  <Analytics />
  </div>
 }
 
